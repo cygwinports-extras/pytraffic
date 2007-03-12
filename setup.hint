@@ -1,6 +1,6 @@
-category: Games
-requires: cygwin python pygame pygtk2
-sdesc: "Rush Hour game"
+category: Games Gnome
+requires: cygwin libSDL12 libSDL_mixer python pygtk2
+sdesc: "GNOME Rush Hour game"
 ldesc: "PyTraffic is a Python version of the board game Rush Hour 
 created by Binary Arts Coporation. The goal is to remove the red car 
 out of the grid through the slot on the right. To do this you have to 

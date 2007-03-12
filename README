@@ -8,16 +8,19 @@ ranging from intermediate to expert, and has an extremely smart hint
 facility which is able to find the best move in every position.
 
 Runtime requirements:
-  cygwin-1.5.18-1
-  pygame-1.7.1-1
-  pygtk2-2.6.3-1
-  python-2.4.1-1
+  cygwin-1.5.24-2
+  libSDL12-1.2.11-1
+  libSDL_mixer-1.2.7-1
+  pygtk2-2.10.3-1
+  python-2.4.3-1
 
 Build requirements:
-  cygwin-1.5.18-1
-  gcc-core-3.4.4-1
-  binutils-20050610-1
-  python-2.4.1-1
+(besides corresponding devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gcc-core-3.4.4-3
+  python-2.4.3-1
 
 Canonical homepage:
   http://alpha.luc.ac.be/Research/Algebra/Members/pytraffic/
@@ -25,60 +28,142 @@ Canonical homepage:
 -------------------------------------------
 
 Build instructions:
-  unpack pytraffic-2.5.3-1-src.tar.bz2
+  unpack pytraffic-2.5.4-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./pytraffic-2.5.3-1.sh all
+  cygport ./pytraffic-2.5.4-1.cygport all
 
 This will create:
-  /usr/src/pytraffic-2.5.3-1-src.tar.bz2
-  /usr/src/pytraffic-2.5.3-1.tar.bz2
+  /usr/src/pytraffic-2.5.4-1-src.tar.bz2
+  /usr/src/pytraffic-2.5.4-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+  /etc/postinstall/pytraffic.sh
   /usr/bin/pytraffic
+  /usr/lib/pytraffic/Affine2D.py
+  /usr/lib/pytraffic/Affine2D.pyc
+  /usr/lib/pytraffic/Affine2D.pyo
+  /usr/lib/pytraffic/Arena.py
+  /usr/lib/pytraffic/Arena.pyc
+  /usr/lib/pytraffic/Arena.pyo
+  /usr/lib/pytraffic/ArtWork.py
+  /usr/lib/pytraffic/ArtWork.pyc
+  /usr/lib/pytraffic/ArtWork.pyo
+  /usr/lib/pytraffic/Board.py
+  /usr/lib/pytraffic/Board.pyc
+  /usr/lib/pytraffic/Board.pyo
+  /usr/lib/pytraffic/BottomBar.py
+  /usr/lib/pytraffic/BottomBar.pyc
+  /usr/lib/pytraffic/BottomBar.pyo
+  /usr/lib/pytraffic/COPYING
+  /usr/lib/pytraffic/Cache.py
+  /usr/lib/pytraffic/Cache.pyc
+  /usr/lib/pytraffic/Cache.pyo
+  /usr/lib/pytraffic/Canvas.py
+  /usr/lib/pytraffic/Canvas.pyc
+  /usr/lib/pytraffic/Canvas.pyo
+  /usr/lib/pytraffic/Chooser.py
+  /usr/lib/pytraffic/Chooser.pyc
+  /usr/lib/pytraffic/Chooser.pyo
+  /usr/lib/pytraffic/CondMessageBox.py
+  /usr/lib/pytraffic/CondMessageBox.pyc
+  /usr/lib/pytraffic/CondMessageBox.pyo
+  /usr/lib/pytraffic/Game.py
+  /usr/lib/pytraffic/Game.pyc
+  /usr/lib/pytraffic/Game.pyo
+  /usr/lib/pytraffic/GameState.py
+  /usr/lib/pytraffic/GameState.pyc
+  /usr/lib/pytraffic/GameState.pyo
+  /usr/lib/pytraffic/Hint.py
+  /usr/lib/pytraffic/Hint.pyc
+  /usr/lib/pytraffic/Hint.pyo
+  /usr/lib/pytraffic/History.py
+  /usr/lib/pytraffic/History.pyc
+  /usr/lib/pytraffic/History.pyo
+  /usr/lib/pytraffic/ImageCache.py
+  /usr/lib/pytraffic/ImageCache.pyc
+  /usr/lib/pytraffic/ImageCache.pyo
+  /usr/lib/pytraffic/LevelFileParser.py
+  /usr/lib/pytraffic/LevelFileParser.pyc
+  /usr/lib/pytraffic/LevelFileParser.pyo
+  /usr/lib/pytraffic/LevelSelector.py
+  /usr/lib/pytraffic/LevelSelector.pyc
+  /usr/lib/pytraffic/LevelSelector.pyo
+  /usr/lib/pytraffic/Main.py
+  /usr/lib/pytraffic/Main.pyc
+  /usr/lib/pytraffic/Main.pyo
+  /usr/lib/pytraffic/Misc.py
+  /usr/lib/pytraffic/Misc.pyc
+  /usr/lib/pytraffic/Misc.pyo
+  /usr/lib/pytraffic/MusicChooser.py
+  /usr/lib/pytraffic/MusicChooser.pyc
+  /usr/lib/pytraffic/MusicChooser.pyo
+  /usr/lib/pytraffic/MusicServer.py
+  /usr/lib/pytraffic/MusicServer.pyc
+  /usr/lib/pytraffic/MusicServer.pyo
+  /usr/lib/pytraffic/PropertyBag.py
+  /usr/lib/pytraffic/PropertyBag.pyc
+  /usr/lib/pytraffic/PropertyBag.pyo
+  /usr/lib/pytraffic/ShowHTML.py
+  /usr/lib/pytraffic/ShowHTML.pyc
+  /usr/lib/pytraffic/ShowHTML.pyo
+  /usr/lib/pytraffic/SmartLabel.py
+  /usr/lib/pytraffic/SmartLabel.pyc
+  /usr/lib/pytraffic/SmartLabel.pyo
+  /usr/lib/pytraffic/SoundCache.py
+  /usr/lib/pytraffic/SoundCache.pyc
+  /usr/lib/pytraffic/SoundCache.pyo
+  /usr/lib/pytraffic/SoundData.py
+  /usr/lib/pytraffic/SoundData.pyc
+  /usr/lib/pytraffic/SoundData.pyo
+  /usr/lib/pytraffic/SoundServer.py
+  /usr/lib/pytraffic/SoundServer.pyc
+  /usr/lib/pytraffic/SoundServer.pyo
+  /usr/lib/pytraffic/Statistics.py
+  /usr/lib/pytraffic/Statistics.pyc
+  /usr/lib/pytraffic/Statistics.pyo
+  /usr/lib/pytraffic/ThemeEngine.py
+  /usr/lib/pytraffic/ThemeEngine.pyc
+  /usr/lib/pytraffic/ThemeEngine.pyo
+  /usr/lib/pytraffic/Timer.py
+  /usr/lib/pytraffic/Timer.pyc
+  /usr/lib/pytraffic/Timer.pyo
+  /usr/lib/pytraffic/_hint.dll
+  /usr/lib/pytraffic/_sdl_mixer.dll
+  /usr/lib/pytraffic/config.db
+  /usr/lib/pytraffic/doc
+  /usr/lib/pytraffic/extra_path.py
+  /usr/lib/pytraffic/extra_path.pyc
+  /usr/lib/pytraffic/extra_path.pyo
+  /usr/lib/pytraffic/extra_themes
+  /usr/lib/pytraffic/libglade
+  /usr/lib/pytraffic/music
+  /usr/lib/pytraffic/music.py
+  /usr/lib/pytraffic/music.pyc
+  /usr/lib/pytraffic/music.pyo
+  /usr/lib/pytraffic/pytraffic.desktop
+  /usr/lib/pytraffic/sdl_mixer.py
+  /usr/lib/pytraffic/sdl_mixer.pyc
+  /usr/lib/pytraffic/sdl_mixer.pyo
+  /usr/lib/pytraffic/sound_test
+  /usr/lib/pytraffic/themes
+  /usr/lib/pytraffic/ttraffic.levels
   /usr/share/applications/pytraffic.desktop
-  /usr/share/doc/Cygwin/pytraffic-2.5.3.README
-  /usr/share/doc/pytraffic-2.5.3/AUTHORS
-  /usr/share/doc/pytraffic-2.5.3/ChangeLog
-  /usr/share/doc/pytraffic-2.5.3/COPYING
-  /usr/share/doc/pytraffic-2.5.3/INSTALL
-  /usr/share/doc/pytraffic-2.5.3/PKG-INFO
-  /usr/share/doc/pytraffic-2.5.3/README
-  /usr/share/pytraffic/Affine2D.py
-  /usr/share/pytraffic/Affine2D.pyc
-  /usr/share/pytraffic/Affine2D.pyo
-  /usr/share/pytraffic/Arena.py
-  /usr/share/pytraffic/Arena.pyc
-  /usr/share/pytraffic/Arena.pyo
-  /usr/share/pytraffic/ArtWork.py
-  /usr/share/pytraffic/ArtWork.pyc
-  /usr/share/pytraffic/ArtWork.pyo
-  /usr/share/pytraffic/Board.py
-  /usr/share/pytraffic/Board.pyc
-  /usr/share/pytraffic/Board.pyo
-  /usr/share/pytraffic/BottomBar.py
-  /usr/share/pytraffic/BottomBar.pyc
-  /usr/share/pytraffic/BottomBar.pyo
-  /usr/share/pytraffic/Cache.py
-  /usr/share/pytraffic/Cache.pyc
-  /usr/share/pytraffic/Cache.pyo
-  /usr/share/pytraffic/Canvas.py
-  /usr/share/pytraffic/Canvas.pyc
-  /usr/share/pytraffic/Canvas.pyo
-  /usr/share/pytraffic/Chooser.py
-  /usr/share/pytraffic/Chooser.pyc
-  /usr/share/pytraffic/Chooser.pyo
-  /usr/share/pytraffic/CondMessageBox.py
-  /usr/share/pytraffic/CondMessageBox.pyc
-  /usr/share/pytraffic/CondMessageBox.pyo
-  /usr/share/pytraffic/config.py
-  /usr/share/pytraffic/config.pyc
-  /usr/share/pytraffic/config.pyo
+  /usr/share/doc/Cygwin/pytraffic-2.5.4.README
+  /usr/share/doc/pytraffic-2.5.4/AUTHORS
+  /usr/share/doc/pytraffic-2.5.4/COPYING
+  /usr/share/doc/pytraffic-2.5.4/ChangeLog
+  /usr/share/doc/pytraffic-2.5.4/INSTALL
+  /usr/share/doc/pytraffic-2.5.4/README
+  /usr/share/icons/hicolor/32x32/apps/pytraffic.png
+  /usr/share/icons/hicolor/48x48/apps/pytraffic.png
+  /usr/share/icons/hicolor/64x64/apps/pytraffic.png
   /usr/share/pytraffic/COPYING
+  /usr/share/pytraffic/config.db
   /usr/share/pytraffic/doc/bounding_boxes.png
   /usr/share/pytraffic/doc/levels.htm
   /usr/share/pytraffic/doc/nobtob.htm
@@ -364,76 +449,16 @@ Files included in the binary package:
   /usr/share/pytraffic/extra_themes/Minimal2D/cars/carVTN2.png
   /usr/share/pytraffic/extra_themes/Minimal2D/cars/carVTN3.png
   /usr/share/pytraffic/extra_themes/Minimal2D/cars/carVTN4.png
-  /usr/share/pytraffic/Game.py
-  /usr/share/pytraffic/Game.pyc
-  /usr/share/pytraffic/Game.pyo
-  /usr/share/pytraffic/GameState.py
-  /usr/share/pytraffic/GameState.pyc
-  /usr/share/pytraffic/GameState.pyo
-  /usr/share/pytraffic/Hint.py
-  /usr/share/pytraffic/Hint.pyc
-  /usr/share/pytraffic/Hint.pyo
-  /usr/share/pytraffic/History.py
-  /usr/share/pytraffic/History.pyc
-  /usr/share/pytraffic/History.pyo
-  /usr/share/pytraffic/icons/carNred.ico
-  /usr/share/pytraffic/icons/carNred16x16.ico
-  /usr/share/pytraffic/icons/carNred32x32.ico
-  /usr/share/pytraffic/icons/carNred64x64.png
-  /usr/share/pytraffic/ImageCache.py
-  /usr/share/pytraffic/ImageCache.pyc
-  /usr/share/pytraffic/ImageCache.pyo
-  /usr/share/pytraffic/LevelFileParser.py
-  /usr/share/pytraffic/LevelFileParser.pyc
-  /usr/share/pytraffic/LevelFileParser.pyo
-  /usr/share/pytraffic/LevelSelector.py
-  /usr/share/pytraffic/LevelSelector.pyc
-  /usr/share/pytraffic/LevelSelector.pyo
-  /usr/share/pytraffic/libglade/carNred64x64.png
+  /usr/share/pytraffic/libglade/AboutDialog.glade
   /usr/share/pytraffic/libglade/MusicBrowser.glade
   /usr/share/pytraffic/libglade/MusicDialog.glade
   /usr/share/pytraffic/libglade/StatisticsWindow.glade
-  /usr/share/pytraffic/Main.py
-  /usr/share/pytraffic/Main.pyc
-  /usr/share/pytraffic/Main.pyo
-  /usr/share/pytraffic/Misc.py
-  /usr/share/pytraffic/Misc.pyc
-  /usr/share/pytraffic/Misc.pyo
+  /usr/share/pytraffic/libglade/carNred64x64.png
+  /usr/share/pytraffic/music/README.README
   /usr/share/pytraffic/music/Ranger_Song.COPYRIGHT
   /usr/share/pytraffic/music/Ranger_Song.s3m
-  /usr/share/pytraffic/music/README.README
-  /usr/share/pytraffic/MusicChooser.py
-  /usr/share/pytraffic/MusicChooser.pyc
-  /usr/share/pytraffic/MusicChooser.pyo
-  /usr/share/pytraffic/MusicServer.py
-  /usr/share/pytraffic/MusicServer.pyc
-  /usr/share/pytraffic/MusicServer.pyo
-  /usr/share/pytraffic/PropertyBag.py
-  /usr/share/pytraffic/PropertyBag.pyc
-  /usr/share/pytraffic/PropertyBag.pyo
-  /usr/share/pytraffic/ShowHTML.py
-  /usr/share/pytraffic/ShowHTML.pyc
-  /usr/share/pytraffic/ShowHTML.pyo
-  /usr/share/pytraffic/SmartLabel.py
-  /usr/share/pytraffic/SmartLabel.pyc
-  /usr/share/pytraffic/SmartLabel.pyo
-  /usr/share/pytraffic/SoundCache.py
-  /usr/share/pytraffic/SoundCache.pyc
-  /usr/share/pytraffic/SoundCache.pyo
-  /usr/share/pytraffic/SoundData.py
-  /usr/share/pytraffic/SoundData.pyc
-  /usr/share/pytraffic/SoundData.pyo
-  /usr/share/pytraffic/SoundServer.py
-  /usr/share/pytraffic/SoundServer.pyc
-  /usr/share/pytraffic/SoundServer.pyo
-  /usr/share/pytraffic/sound_test/tone.mp3
+  /usr/share/pytraffic/pytraffic.desktop
   /usr/share/pytraffic/sound_test/tone.ogg
-  /usr/share/pytraffic/Statistics.py
-  /usr/share/pytraffic/Statistics.pyc
-  /usr/share/pytraffic/Statistics.pyo
-  /usr/share/pytraffic/ThemeEngine.py
-  /usr/share/pytraffic/ThemeEngine.pyc
-  /usr/share/pytraffic/ThemeEngine.pyo
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/background/background.png
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/background/basepoints
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/cars/basepoints
@@ -471,15 +496,14 @@ Files included in the binary package:
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/sound/engine.ogg
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/sound/horn.ogg
   /usr/share/pytraffic/themes/DeLuxe3DLowRes/transform
-  /usr/share/pytraffic/Timer.py
-  /usr/share/pytraffic/Timer.pyc
-  /usr/share/pytraffic/Timer.pyo
   /usr/share/pytraffic/ttraffic.levels
-  /usr/share/pytraffic/_hint.dll
 
 ------------------
 
 Port Notes:
+
+----- version 2.5.4-1 -----
+Version bump.
 
 ----- version 2.5.3-1 -----
 Version bump with support for choice of background music.
