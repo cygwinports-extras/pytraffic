@@ -1,0 +1,15 @@
+inherit distutils
+
+DESCRIPTION="GTK+ Traffic game"
+HOMEPAGE="http://alpha.luc.ac.be/Research/Algebra/Members/pytraffic/"
+SRC_URI="http://alpha.luc.ac.be/Research/Algebra/Members/${PN}/${P}.tar.gz"
+
+CYGPORT_DEPEND="0.3.0"
+
+src_install() {
+	cd ${B}
+	distutils_install
+	python_optimize /usr/lib/${PN}
+
+	dosym ../../share/${PN}/* /usr/lib/${PN}
+}

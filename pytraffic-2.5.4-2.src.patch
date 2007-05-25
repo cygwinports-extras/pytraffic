@@ -1,0 +1,23 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x Makefile.in.in -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x mdate-sh -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x omf.make -x xmldocs.make origsrc/pytraffic-2.5.4/setup.py src/pytraffic-2.5.4/setup.py
+--- origsrc/pytraffic-2.5.4/setup.py	2006-01-27 01:59:07.000000000 -0600
++++ src/pytraffic-2.5.4/setup.py	2007-03-11 20:10:07.812500000 -0500
+@@ -58,7 +58,7 @@
+         def build_and_install_pytraffic_script(self):
+             main_command_contents=\
+ r"""#!/bin/sh
+-exec python %s/share/%s/Main.py""" %\
++exec python %s/lib/%s/Main.py""" %\
+                    (os.path.abspath(self.install_base),config_db["install_leaf"])
+             pytraffic_build=os.path.join(self.build_base,"pytraffic")
+             pytraffic_install=os.path.join(self.install_base,
+@@ -150,8 +150,8 @@
+                         'install_lib' :  "c:\\"+config_db["install_leaf_windows"]}
+     options['build_ext']={'compiler' : 'mingw32'}
+ else:
+-    options['install']={'prefix' : '/usr/local',
+-                        'install_lib' : '$base/share/'+config_db["install_leaf"],
++    options['install']={'prefix' : '/usr',
++                        'install_lib' : '$base/lib/'+config_db["install_leaf"],
+                        'install_data' : '$base'}
+     options['build_ext']={'compiler' : 'unix'}
+ 
