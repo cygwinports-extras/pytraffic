@@ -8,20 +8,20 @@ ranging from intermediate to expert, and has an extremely smart hint
 facility which is able to find the best move in every position.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libSDL12-1.2.11-1
-  libSDL_mixer-1.2.7-1
-  python-2.5.1-1
-  python-gobject2-2.12.3-2
-  python-gtk2-2.10.4-2
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libSDL1.2_0-1.2.13-10
+  libSDL_mixer1.2_0-1.2.8-10
+  python-2.5.4-10
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
-  binutils-20060817-1
-  cygport-0.2.11-1
-  gcc-core-3.4.4-3
-  python-2.5.1-1
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gcc4-core-4.3.2-2
+  python-2.5.4-10
 
 Canonical homepage:
   http://alpha.luc.ac.be/Research/Algebra/Members/pytraffic/
@@ -503,23 +503,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 2.5.4-2 -----
-Rebuilt for python-2.5.
-
------ version 2.5.4-1 -----
-Version bump.
-
------ version 2.5.3-1 -----
-Version bump with support for choice of background music.
-
------ version 2.5-1 -----
-New version with 3D boards and support for pygtk-2.6.
-
------ version 2.0-1 -----
-Major version bump; now requires PyGTK2 and (for sound only) pygame.
-
------ version 1.1.4-1 -----
-Initial release for Cygwin.
+----- version 2.5.4-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

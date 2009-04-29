@@ -4,7 +4,7 @@ DESCRIPTION="GTK+ Traffic game"
 HOMEPAGE="http://alpha.luc.ac.be/Research/Algebra/Members/pytraffic/"
 SRC_URI="http://alpha.luc.ac.be/Research/Algebra/Members/${PN}/${P}.tar.gz"
 
-CYGPORT_DEPEND="0.3.0"
+PATCH_URI="2.5.4-install-dirs.patch"
 
 src_install() {
 	cd ${B}
