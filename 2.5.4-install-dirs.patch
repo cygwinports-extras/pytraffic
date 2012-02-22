@@ -20,3 +20,12 @@
                         'install_data' : '$base'}
      options['build_ext']={'compiler' : 'unix'}
  
+@@ -187,7 +187,7 @@ def icons():
+                      'icons/carNred16x16.ico',
+                      'icons/carNred32x32.ico'])]
+     else:
+-        return [("share/icons/hicolor/32x32/apps",["icons/32x32/pytraffic.png"]),
++        return [("share/icons/hicolor/256x256/apps",["icons/32x32/pytraffic.png"]),
+                 ("share/icons/hicolor/48x48/apps",["icons/48x48/pytraffic.png"]),
+                 ("share/icons/hicolor/64x64/apps",["icons/64x64/pytraffic.png"])]
+ 
