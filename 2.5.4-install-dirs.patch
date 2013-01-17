@@ -1,31 +1,20 @@
---- origsrc/pytraffic-2.5.4/setup.py	2006-01-27 01:59:07.000000000 -0600
-+++ src/pytraffic-2.5.4/setup.py	2007-03-11 20:10:07.812500000 -0500
-@@ -58,7 +58,7 @@
-         def build_and_install_pytraffic_script(self):
-             main_command_contents=\
- r"""#!/bin/sh
--exec python %s/share/%s/Main.py""" %\
-+exec python %s/lib/%s/Main.py""" %\
-                    (os.path.abspath(self.install_base),config_db["install_leaf"])
-             pytraffic_build=os.path.join(self.build_base,"pytraffic")
-             pytraffic_install=os.path.join(self.install_base,
-@@ -150,8 +150,8 @@
+--- origsrc/pytraffic-2.5.4/setup.py	2013-01-16 21:11:01.080865400 -0600
++++ src/pytraffic-2.5.4/setup.py	2013-01-16 21:18:13.342255600 -0600
+@@ -89,7 +89,7 @@ exec python %s/lib/%s/Main.py""" %\
+             if self.root:
+                 install_dir=distutils.util.change_root(self.root,
+                                                            install_dir)
+-            plat_files=glob.glob(os.path.join(install_dir,"*.so"))
++            plat_files=glob.glob(os.path.join(install_dir,"*.dll"))
+             lib_dir_base=os.path.join(self.get_libdir(),
+                                       config_db["install_leaf"])
+             if self.root:
+@@ -150,7 +150,7 @@ if os.name=='nt':
                          'install_lib' :  "c:\\"+config_db["install_leaf_windows"]}
      options['build_ext']={'compiler' : 'mingw32'}
  else:
 -    options['install']={'prefix' : '/usr/local',
--                        'install_lib' : '$base/share/'+config_db["install_leaf"],
 +    options['install']={'prefix' : '/usr',
-+                        'install_lib' : '$base/lib/'+config_db["install_leaf"],
+                         'install_lib' : '$base/share/'+config_db["install_leaf"],
                         'install_data' : '$base'}
      options['build_ext']={'compiler' : 'unix'}
- 
-@@ -187,7 +187,7 @@ def icons():
-                      'icons/carNred16x16.ico',
-                      'icons/carNred32x32.ico'])]
-     else:
--        return [("share/icons/hicolor/32x32/apps",["icons/32x32/pytraffic.png"]),
-+        return [("share/icons/hicolor/256x256/apps",["icons/32x32/pytraffic.png"]),
-                 ("share/icons/hicolor/48x48/apps",["icons/48x48/pytraffic.png"]),
-                 ("share/icons/hicolor/64x64/apps",["icons/64x64/pytraffic.png"])]
- 

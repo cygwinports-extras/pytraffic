@@ -1,9 +1,0 @@
-category: Games Gnome
-requires: libSDL1.2_0 libSDL_mixer1.2_0 python python-gobject python-gtk2.0
-sdesc: "GNOME Rush Hour game"
-ldesc: "PyTraffic is a Python version of the board game Rush Hour 
-created by Binary Arts Coporation. The goal is to remove the red car 
-out of the grid through the slot on the right. To do this you have to 
-slide the other cars out of the way. PyTraffic comes with about 19,000 
-puzzles ranging from intermediate to expert, and has an extremely smart 
-hint facility which is able to find the best move in every position."

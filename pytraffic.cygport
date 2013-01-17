@@ -1,0 +1,24 @@
+inherit distutils
+
+NAME="pytraffic"
+VERSION=2.5.4
+RELEASE=13
+CATEGORY="Games"
+SUMMARY="GNOME Rush Hour game"
+DESCRIPTION="PyTraffic is a Python version of the board game Rush Hour created
+by Binary Arts Coporation. The goal is to remove the red car out of the grid
+through the slot on the right. To do this you have to slide the other cars out
+of the way. PyTraffic comes with about 19,000 puzzles ranging from intermediate
+to expert, and has an extremely smart hint facility which is able to find the
+best move in every position."
+HOMEPAGE="http://alpha.luc.ac.be/Research/Algebra/Members/pytraffic/"
+SRC_URI="http://alpha.luc.ac.be/Research/Algebra/Members/${PN}/${P}.tar.gz"
+PATCH_URI="2.5.4-install-dirs.patch"
+
+__src_install() {
+	cd ${B}
+	distutils_install
+	python_optimize /usr/lib/${PN}
+
+	dosym ../../share/${PN}/* /usr/lib/${PN}
+}
